@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Gasterye';
+  src: url('../font/gasterye_bold-webfont.woff2') format('woff2'),
+        url('../font/gasterye_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.brand-font {
+  font-family: 'Gasterye';
+  font-weight: normal;
+  font-size: 6em;
+}
