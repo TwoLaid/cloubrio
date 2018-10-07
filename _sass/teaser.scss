@@ -10,10 +10,10 @@
   width: 100vw;
   height: 100vh;
 
-  
-
-  padding-left: 40px;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   h1 {
     margin: 0;
@@ -29,7 +29,17 @@
   display: flex;
   flex-direction: column;
 
-  max-width: 33%;
+  text-align: center;
+  align-items: center;
+
+  .logo {
+    width: 170px;
+    height: auto;
+  }
+
+  h2 { 
+    color: #efefef;
+  }
 }
 
 .embed-container {
