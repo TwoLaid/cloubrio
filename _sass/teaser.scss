@@ -1,4 +1,9 @@
 
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+}
+
 .teaser-page {
   
 
@@ -18,6 +23,10 @@
   h1 {
     margin: 0;
   }
+}
+
+.teaser-page.teaser-page--video {
+  background: none;
 }
 
 .teaser-player {
@@ -40,6 +49,18 @@
   h2 { 
     color: #efefef;
   }
+}
+
+.teaser-background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .embed-container {
