@@ -1,12 +1,56 @@
 ---
 layout: teaser_video
 ---
-<video class="teaser-background-video" playsinline autoplay muted loop poster="">
-  <!-- <source src="polina.webm" type="video/webm"> -->
-  <source src="/assets/video/teaser_video.mp4" type="video/mp4">
+<video id="teaser-video" class="teaser-background-video" playsinline autoplay muted loop poster="/assets/img/teaser_background.jpg">
+  <!-- <source src="/assets/video/teaser_video.webm" type="video/webm"> -->
+  <source src="/assets/video/teaser_video_512x.mp4" type="video/mp4">
 </video>
 
+<!-- <div id="video-overlay" class="teaser-video__overlay"></div> -->
 
-<img src="/assets/img/logo.svg" width="85" height="102" class="logo" alt="Clou Brio">
+<div id="video-text">
+  <img src="/assets/img/logo.svg" width="85" height="102" class="logo" alt="Clou Brio">
 
-<h2>Soon in concert!</h2>
+  <div id="concert-trigger">
+    <h2>Soon in concert!</h2>
+    <div id="concert-list" class="concert-list concert-list--hidden">
+      13.10. 19.00 Uhr, Privatclub Support Julius Lahai
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var video = document.getElementById('teaser-video');
+  var overlay = document.getElementById('video-text');
+
+  video.addEventListener('timeupdate', function() {
+    // console.log(video.currentTime);
+
+    if (video.currentTime >= 3.0 && video.currentTime <= 10.0) {
+      overlay.classList.add('teaser-overlay--hidden');
+    } else {
+      overlay.classList.remove('teaser-overlay--hidden');
+    }
+  });
+
+  document.querySelector('.teaser-page--video').addEventListener('click', function() {
+    video.muted = !video.muted;
+  });
+
+  var concertTrigger = document.getElementById('concert-trigger');
+  var concertList = document.getElementById('concert-list');
+
+  concertTrigger.addEventListener('mouseover', function() {
+    if (concertList.classList.contains('concert-list--hidden')) {
+      concertList.classList.remove('concert-list--hidden');
+    }
+
+    document.body.classList.add('concert-list-open');
+  });
+  concertTrigger.addEventListener('mouseout', function() {
+    concertList.classList.add('concert-list--hidden');
+    document.body.classList.remove('concert-list-open');
+  });
+})();
+</script>
