@@ -84,11 +84,20 @@ h1, h2, h3 {
 }
 
 .concert-list {
-  opacity: 1;
-  transition: opacity 200ms;
+  opacity: 0;
+  transition: opacity 250ms;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -3em;
 
-  &.concert-list--hidden {
-    opacity: 0;
+  li {
+    list-style: none;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: 0.4px;
+    text-align: center;
+    line-height: 2em;
   }
 }
 
@@ -97,11 +106,43 @@ h1, h2, h3 {
   z-index: 5;
 }
 
-.concert-list-open .teaser-background-video {
-  -webkit-filter:blur(10px);
-  -ms-filter: blur(10px);
-  -o-filter: blur(10px);
-  filter: blur(10px);
+#concert-trigger h2 {
+  opacity: 1;
+  transition: opacity 250ms;
+}
+
+.concert-list-open {
+  #concert-trigger {
+    h2 {
+      opacity: 0;
+    }
+  }
+
+  .concert-list {
+    opacity: 1;
+  }
+
+  .teaser-background-video {
+    -webkit-filter: blur(10px);
+    -ms-filter: blur(10px);
+    -o-filter: blur(10px);
+    filter: blur(10px);
+  }
+}
+
+.teaser-background-video {
+  -webkit-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
+
+  pointer-events: none;
+
+  transition: 250ms filter linear;
+  -webkit-transition: 250ms -webkit-filter linear;
+  -moz-transition: 250ms -moz-filter linear;
+  -ms-transition: 250ms -ms-filter linear;
+  -o-transition: 250ms -o-filter linear;
 }
 
 .embed-container {
