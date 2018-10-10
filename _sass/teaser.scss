@@ -26,9 +26,10 @@ h1, h2, h3 {
 }
 
 .teaser-page.teaser-page--video {
-  background: none;
   cursor: pointer;
   color: #efefef;
+
+  background-image: url('/assets/img/teaser_poster.jpg');
 }
 
 .teaser-player {
@@ -79,7 +80,7 @@ h1, h2, h3 {
   min-height: calc(100% + 40px);
   width: auto;
   height: auto;
-  z-index: -100;
+  z-index: 1;
   transform: translateX(calc(-50% + 10px)) translateY(calc(-50% + 10px));
 }
 

@@ -14,7 +14,7 @@ layout: teaser_video
   <div id="concert-trigger">
     <h2>Bald live erleben!</h2>
     <ul id="concert-list" class="concert-list">
-      <li><strong>13.10. 19.00 Uhr</strong> Privatclub Support Julius Lahai</li>
+      <li><strong>13.10. 20.00 Uhr</strong> Privatclub Support Julius Lahai</li>
     </ul>
   </div>
 </div>
@@ -41,13 +41,15 @@ layout: teaser_video
   var concertTrigger = document.getElementById('concert-trigger');
   var concertList = document.getElementById('concert-list');
 
-  concertTrigger.addEventListener('mouseover', function() {
+  concertTrigger.addEventListener('mouseover', function(e) {
+    e.stopPropagation();
     // if (concertTrigger.classList.contains('concert-trigger--open')) {
     //   concertTrigger.classList.remove('concert-trigger--open');
     // }
     document.body.classList.add('concert-list-open');
   });
-  concertTrigger.addEventListener('mouseout', function() {
+  concertTrigger.addEventListener('mouseout', function(e) {
+    e.stopPropagation();
     // concertTrigger.classList.add('concert-trigger--open');
     document.body.classList.remove('concert-list-open');
   });
