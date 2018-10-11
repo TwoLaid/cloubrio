@@ -3,7 +3,8 @@ layout: teaser_video
 ---
 <video id="teaser-video" class="teaser-background-video" playsinline autoplay muted loop>
   <!-- <source src="/assets/video/teaser_video.webm" type="video/webm"> -->
-  <source src="/assets/video/teaser_video_512x.mp4" type="video/mp4">
+  <!-- <source src="http://justuswirth.de/cloubrio/teaser_website_short.webm" type="video/webm"> -->
+  <source src="http://justuswirth.de/cloubrio/teaser_website_short.mp4" type="video/mp4">
 </video>
 
 <!-- <div id="video-overlay" class="teaser-video__overlay"></div> -->
@@ -24,15 +25,15 @@ layout: teaser_video
   var video = document.getElementById('teaser-video');
   var overlay = document.getElementById('video-text');
 
-  video.addEventListener('timeupdate', function() {
-    // console.log(video.currentTime);
+  // video.addEventListener('timeupdate', function() {
+  //   // console.log(video.currentTime);
 
-    if ((video.currentTime >= 3.0 && video.currentTime <= 10.0) || video.currentTime >= 210.0) {
-      overlay.classList.add('teaser-overlay--hidden');
-    } else {
-      overlay.classList.remove('teaser-overlay--hidden');
-    }
-  });
+  //   if ((video.currentTime >= 3.0 && video.currentTime <= 10.0) || video.currentTime >= 210.0) {
+  //     overlay.classList.add('teaser-overlay--hidden');
+  //   } else {
+  //     overlay.classList.remove('teaser-overlay--hidden');
+  //   }
+  // });
 
   document.querySelector('.teaser-page--video').addEventListener('click', function() {
     video.muted = !video.muted;
