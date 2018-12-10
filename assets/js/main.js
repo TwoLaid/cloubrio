@@ -32,6 +32,9 @@
 
   if (stickyNav) {
     for (var i = 0; i < navElements.length; i++) {
+      if (!navElements[i].id) {
+        continue;
+      }
       navElements[i].addEventListener('click', function (e) {
         e.preventDefault();
         scrollTo(document.querySelector(this.hash));
