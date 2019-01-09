@@ -454,6 +454,16 @@ footer {
 
   .footer-row {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    & > * {
+      margin-right: 3em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
   .footer-row:last-child {
     margin-bottom: 0;
