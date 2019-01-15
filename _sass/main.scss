@@ -84,6 +84,7 @@ h2 {
   display: inline-block;
   text-align: center;
   font-size: 14px;
+  text-decoration: none!important;
 
   font-weight: $weight-bold;
 }
@@ -237,6 +238,10 @@ h2 {
 .main-wrapper section {
   margin-top: 100px;
   margin-bottom: 100px;
+}
+
+.main-wrapper a {
+  text-decoration: underline;
 }
 
 .main-wrapper h1 {
