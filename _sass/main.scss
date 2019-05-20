@@ -432,6 +432,28 @@ table {
     border-radius: 50%;
   }
 
+  .photo .logo-wrapper {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .photo svg {
+    stroke: black;
+    fill: black;
+
+    width: 50%;
+    height: auto;
+
+    g {
+      fill: black!important;
+    }
+  }
+
   .contact-me {
     margin-top: 40px;
   }
