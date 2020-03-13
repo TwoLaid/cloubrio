@@ -1,58 +1,30 @@
 ---
-layout: teaser_video
+layout: teaser
 ---
-<video id="teaser-video" class="teaser-background-video" playsinline autoplay muted loop>
-  <!-- <source src="/assets/video/teaser_video.webm" type="video/webm"> -->
-  <!-- <source src="http://justuswirth.de/cloubrio/teaser_website_short.webm" type="video/webm"> -->
-  <source src="http://justuswirth.de/cloubrio/teaser_website_short.mp4" type="video/mp4">
-</video>
 
-<!-- <div id="video-overlay" class="teaser-video__overlay"></div> -->
 
-<div id="video-text">
-  <img src="/assets/img/logo.svg" width="85" height="102" class="logo" alt="Clou Brio">
-
-  <div id="concert-trigger">
-    <h2>Bald live erleben!</h2>
-    <ul id="concert-list" class="concert-list">
-      <li><strong>13.10. 20.00 Uhr</strong> Privatclub Support Julius Lahai</li>
-    </ul>
-  </div>
+<div class="logo logo--zootiere-teaser" aria-label="Clou Brio logo">
+  {% include_relative /assets/img/logo.svg %}
 </div>
 
-<script>
-(function() {
-  var video = document.getElementById('teaser-video');
-  var overlay = document.getElementById('video-text');
+<div class="teaser-page__zootiere">
 
-  // video.addEventListener('timeupdate', function() {
-  //   // console.log(video.currentTime);
+  <div class="teaser-page__single">
+    <img src="/assets/img/zootiere/ClouBrio_Artwork_Zootiere.png" width="250" height="250" alt=""
+      class="teaser-page__artwork">
+    <div class="teaser-page__presave">
+      <h1>
+        Neue Single<br />
+        <b>Zootiere</b><br />
+        27.03.2020
+      </h1>
 
-  //   if ((video.currentTime >= 3.0 && video.currentTime <= 10.0) || video.currentTime >= 210.0) {
-  //     overlay.classList.add('teaser-overlay--hidden');
-  //   } else {
-  //     overlay.classList.remove('teaser-overlay--hidden');
-  //   }
-  // });
+      <a href="https://show.co/eMJqvIs" class="button button--presave" target="_blank" rel="noopener noreferrer">Jetzt pre-saven</a>
+    </div>
+  </div>
 
-  document.querySelector('.teaser-page--video').addEventListener('click', function() {
-    video.muted = !video.muted;
-  });
+  <div class="teaser-page__continue">
+    <a href="/index.html" class="button">Weiter zur Website</a>
+  </div>
 
-  var concertTrigger = document.getElementById('concert-trigger');
-  var concertList = document.getElementById('concert-list');
-
-  concertTrigger.addEventListener('mouseover', function(e) {
-    e.stopPropagation();
-    // if (concertTrigger.classList.contains('concert-trigger--open')) {
-    //   concertTrigger.classList.remove('concert-trigger--open');
-    // }
-    document.body.classList.add('concert-list-open');
-  });
-  concertTrigger.addEventListener('mouseout', function(e) {
-    e.stopPropagation();
-    // concertTrigger.classList.add('concert-trigger--open');
-    document.body.classList.remove('concert-list-open');
-  });
-})();
-</script>
+</div>

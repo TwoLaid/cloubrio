@@ -5,12 +5,12 @@ h1, h2, h3 {
 }
 
 .teaser-page {
-  
-
-  background-image: url('/assets/img/teaser_background.jpg');
+  background-image: url('/assets/img/zootiere/landing_teaser_blur.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  overflow-y: scroll;
 
   width: 100vw;
   height: 100vh;
@@ -25,44 +25,97 @@ h1, h2, h3 {
   }
 }
 
-.teaser-page.teaser-page--video {
-  cursor: pointer;
-  color: #efefef;
-
-  background-image: url('/assets/img/teaser_poster.jpg');
-  text-transform: uppercase;
-
-  .logo {
-    margin-bottom: 45px;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-}
-
-.teaser-player {
-  // max-width: calc(50vw - 40px);
-  // width: calc(50vw - 40px);
-}
-
-.teaser-overlay--hidden {
-  visibility: hidden;
-}
-
-.teaser-video__overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
+.logo--zootiere-teaser {
+  position: fixed;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
+
+  mix-blend-mode: soft-light;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: calc(100vh - 80px);
+    width: auto;
+    opacity: 0.5;
+  }
+
+  g {
+    fill: #000000;
+  }
 }
 
-.teaser-background-video {
-  cursor: pointer;
+.teaser-page__zootiere {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+
+  h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: left;
+
+    margin-bottom: 40px;
+  }
+
+  .teaser-page__single {
+    display: flex;
+    margin-top: auto;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .teaser-page__artwork {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .button {
+    text-transform: uppercase;
+  }
+
+  .button--presave {
+    background: #1DB954;
+    color: white;
+  }
+
+  .teaser-page__continue {
+    margin-top: auto;
+  }
 }
+
+
+@media (max-width: 600px) {
+  .teaser-page__zootiere {
+    .teaser-page__single {
+      flex-wrap: wrap;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      justify-content: center;
+    }
+
+    .teaser-page__presave {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .teaser-page__continue {
+      margin-bottom: 20px;
+    }
+  }
+}
+
 
 .teaser-content {
   display: flex;
@@ -71,108 +124,12 @@ h1, h2, h3 {
   text-align: center;
   align-items: center;
 
-  .logo {
-    width: 170px;
-    height: auto;
-  }
-
   h2 { 
     color: #efefef;
-  }
-}
-
-.teaser-background-video {
-  position: fixed;
-  top: calc(50% - 5px);
-  left: calc(50% - 5px);
-  min-width: calc(100% + 40px);
-  min-height: calc(100% + 40px);
-  width: auto;
-  height: auto;
-  z-index: 1;
-  transform: translateX(calc(-50% + 10px)) translateY(calc(-50% + 10px));
-}
-
-.concert-list {
-  opacity: 0;
-  transition: opacity 250ms;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: -3em;
-
-  padding-left: 20px;
-  padding-right: 20px;
-
-  li {
-    list-style: none;
-    font-size: 20px;
-    color: #FFFFFF;
-    letter-spacing: 0.4px;
-    text-align: center;
-    line-height: 2em;
   }
 }
 
 #video-text {
   position: relative;
   z-index: 5;
-}
-
-#concert-trigger h2 {
-  opacity: 1;
-  transition: opacity 250ms;
-}
-
-.concert-list-open {
-  .teaser-page--video {
-    background: rgba(255, 255, 255, 0.12);
-  }
-
-  #concert-trigger {
-    h2 {
-      opacity: 0;
-    }
-  }
-
-  .concert-list {
-    opacity: 1;
-  }
-
-  .teaser-background-video {
-    -webkit-filter: blur(10px);
-    -ms-filter: blur(10px);
-    -o-filter: blur(10px);
-    filter: blur(10px);
-  }
-}
-
-.teaser-background-video {
-  -webkit-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
-
-  pointer-events: none;
-
-  transition: 250ms filter linear;
-  -webkit-transition: 250ms -webkit-filter linear;
-  -moz-transition: 250ms -moz-filter linear;
-  -ms-transition: 250ms -ms-filter linear;
-  -o-transition: 250ms -o-filter linear;
-}
-
-.embed-container {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-
-  iframe {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-  }
 }

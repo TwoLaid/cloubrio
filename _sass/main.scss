@@ -15,9 +15,11 @@ b, strong, h1, h2, h3, h4, h5 {
 $background: #000000;
 $highlight: #2EBEE2;
 $text-bold: #ffffff;
-$text-regular: #999999;
+$text-regular: #cccccc;
 $text-medium: #cccccc;
 $text-footer: $text-regular;
+$color-pink: #EB7992;
+$color-cyan: #8BD2F2;
 $border: rgba(255, 255, 255, 0.18);
 
 $weight-light: 300;
@@ -25,6 +27,16 @@ $weight-regular: 400;
 $weight-semibold: 600;
 $weight-bold: 700;
 
+
+// Current theme: Zootiere
+$color-accent: $color-pink;
+$color-secondary: $color-cyan;
+$color-footer: $color-accent;
+$color-footer-text: #000000;
+$color-footer-hover: $color-secondary;
+$color-button: $color-secondary;
+$color-button-text: #000000;
+$color-ticket-link: $color-secondary;
 
 body, html {
   margin: 0;
@@ -76,9 +88,9 @@ h2 {
 }
 
 .button {
-  background: $text-bold;
+  background: $color-button;
+  color: $color-button-text;
   border-radius: 0;
-  color: $background;
   padding: 11px 11px 11px 11px;
   min-width: 180px;
   display: inline-block;
@@ -87,6 +99,12 @@ h2 {
   text-decoration: none!important;
 
   font-weight: $weight-bold;
+}
+
+.logo--pink {
+  g {
+    fill: $color-pink;
+  }
 }
 
 .navigation {
@@ -149,7 +167,7 @@ h2 {
 .navigation .nav-item.active,
 .navigation .nav-item:hover {
   font-weight: $weight-semibold;
-  color: $text-bold;
+  color: $color-accent;
 }
 
 .navigation .nav-item.active {
@@ -267,7 +285,7 @@ h2 {
 
 .music-album .thumbnail {
   margin-right: 70px;
-  flex-basis: 400px;
+  // flex-basis: 400px;
 }
 
 .music-album .thumbnail img {
@@ -301,15 +319,26 @@ h2 {
 }
 
 .music-album--soon {
-  text-align: center;
-  justify-content: center;
+  text-align: left;
+  // justify-content: center;
   color: $text-medium;
-  font-weight: $weight-bold;
+  font-weight: normal;
 
-  border-top: 1px solid $border;
-  border-bottom: 1px solid $border;
   padding-top: 12px;
   padding-bottom: 12px;
+
+  h1 {
+    text-align: left;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  .button--presave {
+    text-transform: uppercase;
+    background: #1DB954;
+    color: black;
+  }
 }
 
 .track-list {
@@ -347,10 +376,13 @@ h2 {
     }
     .details {
       width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+    h1 {
+      text-align: center;
     }
   }
-
-
 }
 
 table {
@@ -396,6 +428,14 @@ table {
 
   &:first-child {
     padding-right: 16px;
+  }
+
+  &:last-child {
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-ticket-link;
+    }
   }
 }
 
@@ -472,8 +512,8 @@ table {
 footer {
   padding: 60px 0 60px 0;
   text-align: center;
-  background: $text-bold;
-  color: $text-footer;
+  background: $color-footer;
+  color: $color-footer-text;
 
   a {
     color: inherit;
@@ -509,6 +549,9 @@ footer {
     }
     .social:last-child {
       margin-right: 0;
+    }
+    .social:hover {
+      color: $color-footer-hover;
     }
   }
 }
@@ -640,5 +683,37 @@ footer {
   p {
     margin-top: 21px;
     margin-bottom: 21px;
+  }
+}
+
+.landing-teaser {
+  position: relative;
+
+  .landing-teaser__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .logo-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 20vw;
+      height: auto;
+
+      max-width: 168px;
+      max-height: 200px;
+    }
   }
 }
