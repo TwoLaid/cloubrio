@@ -1,125 +1,30 @@
 ---
-layout: content
-title: Musik
+layout: teaser
 ---
-  <nav id="top-nav" class="navigation">
-    <ul>
-      <li class="nav-item"><a href="#music" id="nav-music" title="MUSIK">MUSIK</a></li>
-      <li class="nav-item"><a href="#gigs" id="nav-gigs" title="AUFTRITTE">AUFTRITTE</a></li>
-      <li class="nav-item"><a href="#videos" id="nav-videos" title="VIDEOS">VIDEOS</a></li>
-      <li class="nav-item"><a href="#about" id="nav-about" title="ÜBER">ÜBER</a></li>
-    </ul>
-  </nav>
 
 
-  <section class="landing-video">
-    <video id="" class="" playsinline autoplay muted loop>
-      <source src="http://justuswirth.de/cloubrio/zootiere_teaser_1920.mp4" type="video/mp4">
-    </video>
-  </section>>
-  <!-- <section class="landing-teaser">
-    <img src="/assets/img/zootiere/landing_teaser.jpg" class="landing-teaser__image" alt="" aria-hidden="true">
-    <div class="logo-container logo--pink">
-      {% include_relative /assets/img/logo.svg %}
+<div class="logo logo--zootiere-teaser" aria-label="Clou Brio logo">
+  {% include_relative /assets/img/logo.svg %}
+</div>
+
+<div class="teaser-page__zootiere">
+
+  <div class="teaser-page__single">
+    <img src="/assets/img/zootiere/ClouBrio_Artwork_Zootiere.png" width="250" height="250" alt=""
+      class="teaser-page__artwork">
+    <div class="teaser-page__presave">
+      <h1>
+        Neue Single<br />
+        <b>Zootiere</b><br />
+        27.03.2020
+      </h1>
+
+      <a href="https://show.co/eMJqvIs" class="button button--presave" target="_blank" rel="noopener noreferrer">Jetzt pre-saven</a>
     </div>
-  </section> -->
-
-  <div class="main-wrapper">
-    <section id="music">
-      <h1>MUSIK</h1>
-    
-      <div class="music-album music-album--soon">
-        <div class="thumbnail">
-          <img src="/assets/img/zootiere/ClouBrio_Artwork_Zootiere.png" width="400" height="400" alt="" aria-hidden="true">
-        </div>
-        <div class="details">
-          <h1>
-            Neue Single<br />
-            <b>Zootiere</b><br />
-            27.03.2020
-          </h1>
-          <a href="https://show.co/eMJqvIs" class="button button--presave" target="_blank" rel="noopener noreferrer">Jetzt pre-saven</a>
-        </div>
-      </div>
-      <!-- <article class="music-album music-album--soon">
-        Demnächst!
-      </article> -->
-    </section>
-      
-
-    <section id="gigs">
-      <h1>AUFTRITTE</h1>
-    
-      <table class="table-gigs">
-        <tbody>
-          <tr>
-            <td class="no-gigs"><center>Neue Auftritte sind in Planung.</center></td>
-          </tr>
-
-          <!-- <tr>
-            <td>05.10.2019, 18 Uhr</td>
-            <td>Tag der Deutschen Einheit 2019, <a href="https://goo.gl/maps/4jiNptsPYwEHNB15A" target="_blank">Brandenburger Tor, Berlin</a></td>
-            <td><span class="sold-out">EINTRITT FREI</span></td>
-          </tr>
-
-          <tr>
-            <td>18.10.2019, 20 Uhr</td>
-            <td>TU Semester Auftakt Party, <a href="https://goo.gl/maps/gL6VCqGLy9hA5pHLA" target="_blank">TU Bar, Berlin</a></td>
-            <td><span class="sold-out">EINTRITT FREI</span></td>
-          </tr>
-          <tr>
-            <td>30.10.2019, 18:30 Uhr</td>
-            <td>Die Draufgänger Live // Support Clou Brio, <a href="https://goo.gl/maps/Xy687jUBUDSXTaKQ9" target="_blank">Veranstaltungshaus Elsterland, Elster</a></td>
-            <td><a href="https://www.eventim-light.com/de/a/5c7850d54d96f500018ab25b/e/5c785a489687ba00010ba8ed/?fbclid=IwAR2ZTV7CM5j99FERKG5ZgbzJZfOTnGaNt-S6vg5ams9y1Se44WajXsUKwyY" target="_blank">TICKETS</a></td>
-          </tr> -->
-        </tbody>
-      </table>
-    </section>
-
-
-    <section id="videos">
-      <h1>VIDEOS</h1>
-    
-      <div class="video-gallery">
-        <ul class="video-selection">
-          <li class="video active" data-video-id="RuBFkVKlSrY"><img src="/assets/img/video_berlin.jpg" width="320" height="180" alt="Berlin"></li>
-          <li class="video" data-video-id="OoeJnQmSw-I"><img src="/assets/img/video_vage.jpg" width="320" height="180" alt="Sternzeigen Vage"></li>
-          <li class="video" data-video-id="RZ2Pwpa38Wc"><img src="/assets/img/video_saskia.jpg" width="320" height="180" alt="Saskia Naja"></li>
-        </ul>
-    
-        <div class="auto-resizable-iframe">
-      <div>
-        <div class="video-player"></div>
-        </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h1><span>&Uuml;BER</span> CLOU BRIO</h1>
-    
-      <article class="bio">
-        <div class="photo">
-          <!-- <img src="/assets/img/logo.svg" width="200" height="200" alt="Portrait"> -->
-          <div class="logo-wrapper">
-            {% include_relative /assets/img/logo.svg %}
-          </div>
-        </div>
-    
-        <div class="about-me">
-          <p>
-            Clou Brio sind da! Locker fluffig und rotzfrech spazieren sie durch den Berliner Großstadtdschungel. Die Musik, die sie dabei erschaffen, ist tanzbar oder lädt zum Träumen ein. In ihren Texten kriegt jeder irgendwann sein Fett weg. Und wenn ihnen mal nichts Neues einfällt, dann fahren sie einfach ein paar Runden Ringbahn.
-          </p>
-    
-          <a href="mailto:musik@cloubrio.de" class="button contact-me">SCHREIB UNS</a>
-        </div>
-      </article>
-    </section>
   </div>
 
-  <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  </script>
+  <div class="teaser-page__continue">
+    <a href="/home.html" class="button">Weiter zur Website</a>
+  </div>
+
+</div>
