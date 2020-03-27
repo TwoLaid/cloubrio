@@ -99,6 +99,11 @@ h2 {
   text-decoration: none!important;
 
   font-weight: $weight-bold;
+
+  .button--accent {
+    background: $color-accent;
+    color: white;
+  }
 }
 
 .logo--pink {
@@ -312,6 +317,7 @@ h2 {
   display: inline-block;
   margin-right: 12px;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .music-album .details .music-link--soon {
